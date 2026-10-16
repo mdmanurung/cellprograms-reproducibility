@@ -1,0 +1,22 @@
+# Regenerable bulk (rebuilt by the tracked scripts; matches the source repo's .gitignore)
+benchmarks/model_selection/results/pilot/
+benchmarks/model_selection/results/param/
+benchmarks/model_selection/results/semi/
+benchmarks/model_selection/results/runtime_*/
+benchmarks/model_selection/results/logs/
+benchmarks/biomni_replication/data/
+benchmarks/biomni_replication/results/fits/
+benchmarks/biomni_replication/results/fits_rawcounts/
+benchmarks/biomni_replication/results/synth_data/
+benchmarks/biomni_replication/results/synth_out/
+benchmarks/biomni_replication/results/sim_adj4/
+benchmarks/biomni_replication/results/sim_adj5/
+benchmarks/**/results/logs/
+__pycache__/
+*.pyc
+
+# Regenerated large data from the vignette pipelines
+data/
+*_pb/
+pseudobulk/
+*.h5ad
