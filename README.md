@@ -189,3 +189,26 @@ that folder's README is the authoritative run book):
   `benchmarks/cmp_detection/scripts/real_data.R` and the Census builder in
   `benchmarks/biomni_replication/01_pseudobulk.py` reproduces the underlying
   pseudobulk from pinned public data.
+
+## Update 2026-10-19 — spec-v2 validated package state
+
+The bundle's analyses were run against `cellprograms@413e290`. The package
+has since completed its spec-v2 milestone queue (calibrated CMP association
+suite, program-sharing sensitivity gates, cross-cohort replication
+workflow, metacells folded in from the former `cellprogramsMC` sub-package,
+projection query-set dependence documented). All changes are
+backward-compatible with the analysis code here — legacy function names and
+the registered operating point are unchanged.
+
+`environment/install.R` now pins the validated state:
+`flashier.utils@738eba1`, `cellprograms@cce06d9` (limitation registers:
+`reports/audit/LIMITATIONS.md` in cellprograms, `reports/LIMITATIONS.md` in
+flashier-utils). `environment/sessionInfo.txt` remains the historical
+as-run record for the published vignettes and is intentionally not
+regenerated.
+
+New since the original bundle: metacells (`MetacellsByGroupsSEACells`,
+mcRigor QC) in the main package; cross-cohort replication case-study
+article (`articles/cross_cohort_replication.html`); confirm-scale
+benchmark evidence (`benchmarks/cmp_calibration/`,
+`benchmarks/program_sharing_sensitivity/` in the package repo).

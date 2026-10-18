@@ -10,11 +10,12 @@ install.packages(c("cli", "digest", "ebnm", "remotes"), repos = repos)
 
 # 2. Pinned backends (same pins as the package's CI)
 remotes::install_github("willwerscheid/flashier@fd44811ab22d61ee905e1964175571c452fe7683")
-remotes::install_github("mdmanurung/flashier.utils")
+remotes::install_github("mdmanurung/flashier.utils@738eba1")  # REL-1 validated state
 
-# 3. The package itself — pinned to the exact commit the analyses were run with
+# 3. The package itself — pinned to the spec-v2 validated state (2026-10-19).
+#    The analyses were originally run with @413e290; the API is unchanged.
 #    (repo: https://github.com/mdmanurung/cellprograms)
-remotes::install_github("mdmanurung/cellprograms@413e290")
+remotes::install_github("mdmanurung/cellprograms@cce06d9")  # REL-1 validated state (spec-v2 complete)
 
 # 4. Analysis-side Suggests used by the vignettes/benchmarks
 install.packages(c("ggplot2", "data.table", "igraph", "mashr", "testthat"),
